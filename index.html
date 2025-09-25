@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>R. Jyotheeswar - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+        scroll-behavior: smooth;
+      }
+      /* Custom scrollbar for a nicer look */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #2d3748;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #4a5568;
+        border-radius: 4px;
+      }
+
+      /* --- BACKGROUND ANIMATION STYLES (Floating Spheres) --- */
+      .animation-area {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        z-index: -1; /* Keep it behind all content */
+        pointer-events: none; /* Crucial: ensures links/buttons can be clicked */
+      }
+
+      .box-area li {
+        position: absolute;
+        display: block;
+        list-style: none;
+        width: 25px;
+        height: 25px;
+        background: rgba(0, 255, 255, 0.15); /* Semi-transparent Cyan */
+        animation: animate 25s linear infinite;
+        bottom: -150px;
+        border-radius: 50%;
+        box-shadow: 0 0 10px rgba(0, 255, 255, 0.3); /* Subtle glow */
+      }
+
+      .box-area li:nth-child(1) {
+        left: 86%;
+        width: 80px;
+        height: 80px;
+        animation-delay: 0s;
+      }
+      .box-area li:nth-child(2) {
+        left: 12%;
+        width: 30px;
+        height: 30px;
+        animation-delay: 1.5s;
+        animation-duration: 10s;
+      }
+      .box-area li:nth-child(3) {
+        left: 70%;
+        width: 100px;
+        height: 100px;
+        animation-delay: 5.5s;
+      }
+      .box-area li:nth-child(4) {
+        left: 42%;
+        width: 150px;
+        height: 150px;
+        animation-delay: 0s;
+        animation-duration: 15s;
+      }
+      .box-area li:nth-child(5) {
+        left: 65%;
+        width: 40px;
+        height: 40px;
+        animation-delay: 0s;
+      }
+      .box-area li:nth-child(6) {
+        left: 15%;
+        width: 110px;
+        height: 110px;
+        animation-delay: 3.5s;
+        animation-duration: 12s;
+      }
+
+      @keyframes animate {
+        0% {
+          transform: translateY(0) rotate(0deg) scale(1);
+          opacity: 1;
+        }
+        100% {
+          transform: translateY(-1000px) rotate(720deg) scale(0.5);
+          opacity: 0;
+        }
+      }
+      /* -------------------------------------------------- */
+    </style>
+  </head>
+  <body class="bg-gray-900 text-gray-200">
+    <div class="animation-area">
+      <ul class="box-area">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+    <nav class="bg-gray-950 p-4 sticky top-0 z-50 shadow-lg">
+      <div class="container mx-auto flex justify-center space-x-4 md:space-x-8">
+        <button
+          class="nav-button text-gray-300 hover:text-cyan-400 font-bold py-2 px-4 rounded-full transition-colors duration-300"
+          data-section="home-section"
+        >
+          Home
+        </button>
+        <button
+          class="nav-button text-gray-300 hover:text-cyan-400 font-bold py-2 px-4 rounded-full transition-colors duration-300"
+          data-section="about-section"
+        >
+          About Me
+        </button>
+        <button
+          class="nav-button text-gray-300 hover:text-cyan-400 font-bold py-2 px-4 rounded-full transition-colors duration-300"
+          data-section="tech-stack-section"
+        >
+          Tech Stack
+        </button>
+        <button
+          class="nav-button text-gray-300 hover:text-cyan-400 font-bold py-2 px-4 rounded-full transition-colors duration-300"
+          data-section="connect-section"
+        >
+          Connect
+        </button>
+      </div>
+    </nav>
+
+    <section
+      id="home-section"
+      class="active-section container mx-auto px-6 py-20 md:py-32 flex flex-col md:flex-row items-center justify-between"
+    >
+      <div class="md:w-1/2 text-center md:text-left mb-10 md:mb-0">
+        <h1
+          class="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight text-white mb-4"
+        >
+          👋 Hi, I'm <span class="text-cyan-400">R. Jyotheeswar</span>
+        </h1>
+        <p class="text-lg md:text-xl text-gray-400 mb-6">
+          🚀 Aspiring Full-Stack Developer
+          <br />
+          💻 Passionate about Web Development, Java, Python & DSA
+          <br />
+          🌱 Always learning and building projects to improve my skills
+        </p>
+        <button
+          class="nav-button inline-block bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transform transition duration-300 hover:scale-105"
+          data-section="connect-section"
+        >
+          Connect With Me
+        </button>
+      </div>
+      <div class="md:w-1/2 flex justify-center md:justify-end">
+        <div
+          class="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden shadow-2xl border-4 border-cyan-400"
+        >
+          <img
+            src="profileimage.jpg"
+            alt="R. Jyotheeswar Profile"
+            class="w-full h-full object-cover"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="about-section"
+      class="hidden-section hidden bg-gray-800 py-16 md:py-24"
+    >
+      <div class="container mx-auto px-6">
+        <h2 class="text-3xl sm:text-4xl font-bold text-center text-white mb-12">
+          About Me
+        </h2>
+        <div
+          class="bg-gray-900 rounded-xl p-8 shadow-2xl transform transition duration-300 hover:shadow-cyan-500/50"
+        >
+          <p class="text-lg text-gray-300 leading-relaxed mb-4">
+            🎓 Pursuing B.Tech in Computer Science (Data Science) at Mohan Babu
+            University.
+          </p>
+          <p class="text-lg text-gray-300 leading-relaxed mb-4">
+            💡 Skilled in
+            <span class="font-bold text-cyan-400"
+              >Java, Python, SQL, HTML, CSS, JavaScript, and Git</span
+            >.
+          </p>
+          <p class="text-lg text-gray-300 leading-relaxed mb-4">
+            🚀 Currently focusing on
+            <span class="font-bold text-cyan-400"
+              >Data Structures & Algorithms (DSA)</span
+            >
+            and Full-Stack projects.
+          </p>
+          <p class="text-lg text-gray-300 leading-relaxed mb-4">
+            🎯 Goal: To become a skilled Data Scientist & Full-Stack Developer.
+          </p>
+          <p class="text-lg text-gray-300 leading-relaxed mb-4">
+            📊 Building strong foundations in Data Structures, Algorithms, and
+            Problem-Solving.
+          </p>
+          <p class="text-lg text-gray-300 leading-relaxed mb-4">
+            🤖 Exploring Machine Learning, Artificial Intelligence, and Data
+            Analytics.
+          </p>
+          <p class="text-lg text-gray-300 leading-relaxed">
+            🌐 Applying Web Development + Data Science to build impactful
+            real-world projects and contributing to open-source.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="tech-stack-section"
+      class="hidden-section hidden py-16 md:py-24"
+    >
+      <div class="container mx-auto px-6">
+        <h2 class="text-3xl sm:text-4xl font-bold text-center text-white mb-12">
+          Tech Stack
+        </h2>
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8"
+        >
+          <div
+            class="bg-gray-800 rounded-xl p-6 shadow-xl transform transition duration-300 hover:scale-105 hover:bg-cyan-950"
+          >
+            <div class="flex items-center mb-4">
+              <i class="fas fa-code text-cyan-400 text-2xl mr-3"></i>
+              <h3 class="text-xl font-semibold text-white">
+                Programming Languages
+              </h3>
+            </div>
+            <ul class="list-disc list-inside text-gray-300 space-y-2">
+              <li><i class="fab fa-java mr-2 text-red-500"></i>Java</li>
+              <li><i class="fab fa-python mr-2 text-blue-400"></i>Python</li>
+              <li><i class="fab fa-js mr-2 text-yellow-400"></i>JavaScript</li>
+            </ul>
+          </div>
+
+          <div
+            class="bg-gray-800 rounded-xl p-6 shadow-xl transform transition duration-300 hover:scale-105 hover:bg-cyan-950"
+          >
+            <div class="flex items-center mb-4">
+              <i class="fas fa-desktop text-cyan-400 text-2xl mr-3"></i>
+              <h3 class="text-xl font-semibold text-white">Frontend</h3>
+            </div>
+            <ul class="list-disc list-inside text-gray-300 space-y-2">
+              <li><i class="fab fa-html5 mr-2 text-orange-500"></i>HTML</li>
+              <li><i class="fab fa-css3-alt mr-2 text-blue-500"></i>CSS</li>
+              <li><i class="fab fa-js mr-2 text-yellow-400"></i>JavaScript</li>
+              <li>
+                <i class="fab fa-react mr-2 text-cyan-400"></i>React
+                (Placeholder)
+              </li>
+            </ul>
+          </div>
+
+          <div
+            class="bg-gray-800 rounded-xl p-6 shadow-xl transform transition duration-300 hover:scale-105 hover:bg-cyan-950"
+          >
+            <div class="flex items-center mb-4">
+              <i class="fas fa-server text-cyan-400 text-2xl mr-3"></i>
+              <h3 class="text-xl font-semibold text-white">Backend</h3>
+            </div>
+            <ul class="list-disc list-inside text-gray-300 space-y-2">
+              <li>
+                <i class="fab fa-node-js mr-2 text-green-500"></i>Node.js
+                (Placeholder)
+              </li>
+              <li>
+                <i class="fas fa-flask mr-2 text-gray-400"></i>Flask
+                (Placeholder)
+              </li>
+            </ul>
+          </div>
+
+          <div
+            class="bg-gray-800 rounded-xl p-6 shadow-xl transform transition duration-300 hover:scale-105 hover:bg-cyan-950"
+          >
+            <div class="flex items-center mb-4">
+              <i class="fas fa-database text-cyan-400 text-2xl mr-3"></i>
+              <h3 class="text-xl font-semibold text-white">Databases</h3>
+            </div>
+            <ul class="list-disc list-inside text-gray-300 space-y-2">
+              <li><i class="fas fa-database mr-2 text-gray-400"></i>SQL</li>
+              <li>
+                <i class="fas fa-leaf mr-2 text-green-500"></i>MongoDB
+                (Placeholder)
+              </li>
+            </ul>
+          </div>
+
+          <div
+            class="bg-gray-800 rounded-xl p-6 shadow-xl transform transition duration-300 hover:scale-105 hover:bg-cyan-950"
+          >
+            <div class="flex items-center mb-4">
+              <i class="fas fa-tools text-cyan-400 text-2xl mr-3"></i>
+              <h3 class="text-xl font-semibold text-white">
+                Tools & Platforms
+              </h3>
+            </div>
+            <ul class="list-disc list-inside text-gray-300 space-y-2">
+              <li><i class="fab fa-git-alt mr-2 text-orange-500"></i>Git</li>
+              <li><i class="fab fa-github mr-2 text-white"></i>GitHub</li>
+              <li>
+                <i class="fas fa-code mr-2 text-blue-400"></i>VS Code
+                (Placeholder)
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="connect-section"
+      class="hidden-section hidden py-16 md:py-24 bg-gray-800"
+    >
+      <div class="container mx-auto px-6 text-center">
+        <h2 class="text-3xl sm:text-4xl font-bold text-white mb-8">
+          Connect With Me
+        </h2>
+        <div
+          class="flex flex-col sm:flex-row justify-center items-center space-y-6 sm:space-y-0 sm:space-x-8"
+        >
+          <a
+            href="https://github.com/jyotheeswar60"
+            target="_blank"
+            class="flex items-center space-x-3 text-gray-300 hover:text-white transition-colors duration-300"
+          >
+            <i class="fab fa-github text-4xl"></i>
+            <span class="text-xl font-medium">jyotheeswar60</span>
+          </a>
+          <a
+            href="https://linkedin.com/in/r-jyotheeswar"
+            target="_blank"
+            class="flex items-center space-x-3 text-gray-300 hover:text-white transition-colors duration-300"
+          >
+            <i class="fab fa-linkedin text-4xl"></i>
+            <span class="text-xl font-medium">R. Jyotheeswar</span>
+          </a>
+          <a
+            href="mailto:jyotheeswarr60@gmail.com"
+            class="flex items-center space-x-3 text-gray-300 hover:text-white transition-colors duration-300"
+          >
+            <i class="fas fa-envelope text-4xl"></i>
+            <span class="text-xl font-medium">jyotheeswarr60@gmail.com</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-gray-950 text-center py-6 text-gray-500 text-sm">
+      <div class="container mx-auto px-6">
+        <p>&copy; 2024 R. Jyotheeswar. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Function to show a specific section and hide others
+        function showSection(sectionId) {
+          // Get all sections and hide them
+          document.querySelectorAll("section").forEach((section) => {
+            section.classList.add("hidden");
+          });
+
+          // Show the selected section
+          const targetSection = document.getElementById(sectionId);
+          if (targetSection) {
+            targetSection.classList.remove("hidden");
+            window.scrollTo(0, 0); // Scroll to top for a clean view
+          }
+        }
+
+        // Add click event listeners to all navigation buttons
+        document.querySelectorAll(".nav-button").forEach((button) => {
+          button.addEventListener("click", function () {
+            const sectionId = this.getAttribute("data-section");
+            showSection(sectionId);
+          });
+        });
+
+        // Initially show the home section
+        showSection("home-section");
+      });
+    </script>
+  </body>
+</html>
