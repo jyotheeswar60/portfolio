@@ -31,8 +31,6 @@
         background: #4a5568;
         border-radius: 4px;
       }
-
-      /* --- BACKGROUND ANIMATION STYLES (Floating Spheres) --- */
       .animation-area {
         position: fixed;
         top: 0;
@@ -40,8 +38,8 @@
         width: 100%;
         height: 100%;
         overflow: hidden;
-        z-index: -1; /* Keep it behind all content */
-        pointer-events: none; /* Crucial: ensures links/buttons can be clicked */
+        z-index: -1;
+        pointer-events: none;
       }
 
       .box-area li {
@@ -50,11 +48,11 @@
         list-style: none;
         width: 25px;
         height: 25px;
-        background: rgba(0, 255, 255, 0.15); /* Semi-transparent Cyan */
+        background: rgba(0, 255, 255, 0.15); 
         animation: animate 25s linear infinite;
         bottom: -150px;
         border-radius: 50%;
-        box-shadow: 0 0 10px rgba(0, 255, 255, 0.3); /* Subtle glow */
+        box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
       }
 
       .box-area li:nth-child(1) {
@@ -107,7 +105,6 @@
           opacity: 0;
         }
       }
-      /* -------------------------------------------------- */
     </style>
   </head>
   <body class="bg-gray-900 text-gray-200">
@@ -125,26 +122,22 @@
       <div class="container mx-auto flex justify-center space-x-4 md:space-x-8">
         <button
           class="nav-button text-gray-300 hover:text-cyan-400 font-bold py-2 px-4 rounded-full transition-colors duration-300"
-          data-section="home-section"
-        >
+          data-section="home-section">
           Home
         </button>
         <button
           class="nav-button text-gray-300 hover:text-cyan-400 font-bold py-2 px-4 rounded-full transition-colors duration-300"
-          data-section="about-section"
-        >
+          data-section="about-section">
           About Me
         </button>
         <button
           class="nav-button text-gray-300 hover:text-cyan-400 font-bold py-2 px-4 rounded-full transition-colors duration-300"
-          data-section="tech-stack-section"
-        >
+          data-section="tech-stack-section">
           Tech Stack
         </button>
         <button
           class="nav-button text-gray-300 hover:text-cyan-400 font-bold py-2 px-4 rounded-full transition-colors duration-300"
-          data-section="connect-section"
-        >
+          data-section="connect-section">
           Connect
         </button>
       </div>
@@ -158,7 +151,9 @@
         <h1
           class="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight text-white mb-4"
         >
-          👋 Hi, I'm <span class="text-cyan-400">R. Jyotheeswar</span>
+          👋 Hi, I'm
+          <br>
+          <span class="text-cyan-400">R. Jyotheeswar</span>
         </h1>
         <p class="text-lg md:text-xl text-gray-400 mb-6">
           🚀 Aspiring Full-Stack Developer
@@ -411,3 +406,4 @@
     </script>
   </body>
 </html>
+
