@@ -62,7 +62,7 @@ I'm always open to collaborating on projects, discussing technology, or networki
 | Platform | Link |
 | :--- | :--- |
 | **GitHub** | [@jyotheeswar60](https://www.google.com/search?q=https://github.com/jyotheeswar60) |
-| **LinkedIn** | [R. Jyotheeswar](https://www.google.com/search?q=https://linkedin.com/in/r-jyotheeswar) |
+| **LinkedIn** | [R. Jyotheeswar](https://www.linkedin.com/in/jyotheeswar28/) |
 | **Email** | [jyotheeswarr60@gmail.com](mailto:jyotheeswarr60@gmail.com) |
 
 
