@@ -264,17 +264,51 @@ box-shadow:0 0 20px #00f7ff;
   transition: 0.3s;
 }
 /* CONTACT (NO FORM) */
-.contact-box{
-margin-top:40px;
-padding:40px;
-border-radius:20px;
-background:rgba(0,0,0,0.6);
-border:1px solid rgba(0,255,255,0.3);
-box-shadow:0 0 25px rgba(0,255,255,0.3);
+/* CONTACT CARD STYLE */
+#contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 10%;
 }
 
-.contact-item{
-margin:15px 0;
+.contact-card {
+  background: #111;
+  padding: 40px 50px;
+  border-radius: 15px;
+  text-align: center;
+  width: 400px;
+
+  border: 1px solid rgba(0,255,255,0.3);
+  box-shadow: 0 0 25px rgba(0,255,255,0.2);
+}
+
+.contact-card h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.contact-text {
+  color: #aaa;
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+
+/* ICONS */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.social-icons img {
+  width: 40px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.social-icons img:hover {
+  transform: scale(1.2);
 }
 
 /* RESPONSIVE */
@@ -311,7 +345,7 @@ R. Jyotheeswar
 <h2 class="hero-subtitle">
 Data Science Student 
 <span class="divider-line">|</span> 
-Aspiring Data Analyst & Backend Developer
+Aspiring Data Analyst & Frontend Developer
 </h2>
 
 <p class="hero-desc">
@@ -334,14 +368,14 @@ Building systems that process, analyze, and visualize the future.
 <section id="about" class="about-section">
 
 <h1 class="about-heading">
-<span class="number">01.</span> About
+ About
 </h1>
 
 <div class="about-container">
 
 <!-- LEFT CARD -->
 <div class="about-card">
-<h2><span class="line"></span> Education</h2>
+<h2>>Education</h2>
 
 <p class="year">2023 – 2027</p>
 
@@ -429,20 +463,20 @@ to craft seamless digital experiences.
 <p class="project-description">Responsive personal portfolio.
     <br>
 Built with HTML, CSS, JS, and Three.js for dynamic backgrounds.
-
+<a href="https://jyotheeswar60.github.io/portfolio/" target="_blank" class="btn primary" style="margin-top: 100px;">VIEW PROJECT</a>
 </p>
 </div>
 
 <div class="project-card">
 <h3>Sudoku Game</h3>
 <p class="project-description">Interactive Sudoku web app.
-    <br>
+<br>
 Features multiple difficulty levels and a sleek UI built with JavaScript.
-contains:<br>
-- Sudoku board generation
-- User input validation
-- Timer and scoring system
-- Training mode with hints and solutions
+<br>
+- Sudoku board generation<br>
+- User input validation<br>
+- Timer and scoring system<br>
+- Training mode with hints and solutions<br>
 <a href="https://jyotheeswar60.github.io/Digital-Sudoku-Game-Web-Application-/" target="_blank" class="btn primary">VIEW PROJECT</a>
 </p>
 </div>
@@ -457,14 +491,39 @@ contains:<br>
 </section>
 
 <!-- CONTACT (NO FORM) -->
-<section id="contact">
-<h2>Get In Touch</h2>
 
-<div class="contact-box">
-<div class="contact-item">📧 jyotheeswarr60@gmail.com</div>
-<div class="contact-item">📞 +91 9177183993</div>
-<div class="contact-item">🔗 linkedin.com/in/jyotheeswar28</div>
-</div>
+<!-- CONTACT SECTION -->
+<section id="contact">
+
+  <div class="contact-card">
+
+    <h2>Contact Me !</h2>
+
+    <p class="contact-text">
+      I love meeting new people. You can contact me using these platforms.
+    </p>
+
+    <div class="social-icons">
+
+      <!-- LINKEDIN -->
+      <a href="https://www.linkedin.com/in/jyotheeswar28" target="_blank">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg">
+      </a>
+
+<!-- GMAIL -->
+<a href="mailto:jyotheeswarr60@gmail.com">
+  <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Gmail">
+</a>
+
+      <!-- GITHUB (FIXED ICON) -->
+      <a href="https://github.com/jyotheeswar60" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png">
+      </a>
+
+    </div>
+
+  </div>
+
 </section>
 
 <script>
